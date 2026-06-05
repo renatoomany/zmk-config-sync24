@@ -1,13 +1,44 @@
 # Copyright (c) 2025 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SYNC24_LEFT
+if SHIELD_SYNC24_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "SYNC24"
-    
+    default "SYNC24 Dongle"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_STUDIO
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif
+
+if SHIELD_SYNC24_LEFT_PERIPHERAL || SHIELD_SYNC24_RIGHT_PERIPHERAL
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
 
 endif
 
@@ -17,6 +48,16 @@ config ZMK_SPLIT
     default y
 
 config ZMK_STUDIO
+    default y
+
+endif
+
+if SHIELD_SYNC24_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "SYNC24"
+    
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif

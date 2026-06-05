@@ -6,3 +6,12 @@ config SHIELD_SYNC24_LEFT
 
 config SHIELD_SYNC24_RIGHT
     def_bool $(shields_list_contains,sync24_right)
+
+config SHIELD_SYNC24_DONGLE
+    def_bool $(shields_list_contains,sync24_dongle)
+
+config SHIELD_SYNC24_LEFT_PERIPHERAL
+    def_bool $(shields_list_contains,sync24_left_peripheral)
+
+config SHIELD_SYNC24_RIGHT_PERIPHERAL
+    def_bool $(shields_list_contains,sync24_right_peripheral)

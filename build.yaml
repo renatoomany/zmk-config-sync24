@@ -5,4 +5,14 @@ include:
   - board: seeeduino_xiao_ble
     shield: sync24_right
   - board: seeeduino_xiao_ble
+    shield: sync24_dongle prospector_adapter
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: sync24_dongle
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: sync24_left_peripheral
+  - board: seeeduino_xiao_ble
+    shield: sync24_right_peripheral
+  - board: seeeduino_xiao_ble
     shield: settings_reset
